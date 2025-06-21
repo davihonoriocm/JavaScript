@@ -107,3 +107,72 @@ var number = 2;
 
 number = 8
 ~~~
+
+### Nomenclaturas
+
+- Caracteres permitidos para iniciar a nomenclatura de um identificador
+
+~~~JavaScript
+./src/script.js
+
+// letras
+var number;
+var Number;
+
+//sublinhado
+var _number
+
+//cifrão
+var $number;
+
+~~~
+
+- Case-senstive
+~~~JavaScript
+./src/script.js
+
+// "number" é diferente de "Number"
+~~~
+
+- Nomenclaturas Compostas
+
+~~~JavaScript
+./src/script.js
+
+// camelCase
+var myName
+
+//PascalCase
+var MyName;
+
+// snake_case
+var my_name;
+~~~
+
+## TIPOS DE DADOS
+
+### Primitivos
+
+~~~JavaScript
+./src/script.js
+
+// String
+var name = "Alex"; // Aspas Composta
+var surname = 'Bessa'; // Aspas Simples
+
+// Number
+var age = 28;
+var weight = 85.6;
+
+//boolean
+var active = true;
+var permission = false;
+
+// Undefined
+var contains;
+console.log(contains);
+
+// Null
+var data = null;
+
+~~~
