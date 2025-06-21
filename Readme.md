@@ -49,7 +49,7 @@
 ### Comentario de linha
 
 ~~~ JavaScript
-
+./src/script.js
 // Cometário de linha
 
 ~~~
@@ -57,7 +57,7 @@
 ### Comentario de bloco simples
 
 ~~~ JavaScript
-
+./src/script.js
 /* Cometário de bloco simples */
 
 ~~~
@@ -65,9 +65,45 @@
 ### Comentario de bloco com marcadores
 
 ~~~ JavaScript
-
+./src/script.js
 /**
  *  Cometário de bloco com marcadores
 */
 
+~~~
+
+## VARIÁVEIS
+
+### Declaração
+
+~~~ JavaScript
+./src/script.js
+var number;
+~~~
+
+### Atribuição de valor
+
+~~~ JavaScript
+./src/script.js
+
+var number;
+number = 2;
+~~~
+
+### Declaração e atribuição de valor
+
+~~~ JavaScript
+./src/script.js
+
+var number = 2;
+~~~
+
+### Reatribuição de valor
+
+~~~ JavaScript
+./src/script.js
+
+var number = 2;
+
+number = 8
 ~~~
