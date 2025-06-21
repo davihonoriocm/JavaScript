@@ -43,3 +43,31 @@
 <body></body>
 </html>
 ~~~
+
+## Comentários 
+
+### Comentario de linha
+
+~~~ JavaScript
+
+// Cometário de linha
+
+~~~
+
+### Comentario de bloco simples
+
+~~~ JavaScript
+
+/* Cometário de bloco simples */
+
+~~~
+
+### Comentario de bloco com marcadores
+
+~~~ JavaScript
+
+/**
+ *  Cometário de bloco com marcadores
+*/
+
+~~~
