@@ -193,4 +193,40 @@ var person = {
     age: 40
 };
 
-~~~ 
+// typeof
+var age = 29
+console.log(typeof age);
+
+~~~
+
+### Coerção de tipo
+- Implícita 
+
+~~~ javascript
+./src/script.js
+
+var age = 29;
+var weigth = "86.5";
+var result = age + weight;
+
+console.log(typeof result)
+~~~
+
+- Explícita 
+
+~~~ javascript
+./src/script.js
+
+//number()
+var weight = Number("105.4");
+console.log(typeof weight)
+
+//string()
+var age = String(29);
+console.log(typeof age)
+
+//boolean()
+var active = Boolean(0)
+console.log(typeof active);
+
+~~~
