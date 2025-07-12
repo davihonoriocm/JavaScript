@@ -1,232 +1,682 @@
-# FUNDAMENTOS DO JAVASCRIPT CLÁSSICO
+# Fundamentos do JavaScript Clássico
 
-## INTEGRAÇÕES 
+## PRIMEIROS PASSOS
 
-### Integrar JavaScript de forma interna
+- Criar arquivo ***index.html*** na raiz do projeto
 
-~~~ HTML
+``` bash
+
+.
+│ index.html
+
+```
+
+- Criar estrutura básica para arquivo ***index.html*** e executá-lo no navegador
+
+``` html
 ./index.html
 
 <!DOCTYPE html>
 
-<html lang="PT-br">
-<head>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+  </head>
+  <body></body>
+</html>
+
+```
+
+## INTEGRAÇÕES
+
+### Integrar **JavaScript** de forma interna ao arquivo ***index.html***
+
+- Adicionar tag ***script*** à tag ***head***
+
+``` html
+./index.html
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script></script>
+  </head>
+  <body></body>
+</html>
+
+```
+
+- Imprimir "Hello World" no console do navegador
+
+``` html
+./index.html
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <script>
-        console.log("hello world!");
+      console.log("Hello World!");
     </script>
-</head>
-<body></body>
+  </head>
+  <body></body>
 </html>
-~~~
 
-### Integrar JavaScript de forma interna
-***
-- Criar diretório ***SRC*** na raiz do projeto
-- Criar arquivo ***script.js*** na raiz do diretório ***SRC***
-- Integrar de forma externa o arquivo ***script.js*** no arquvio ***index.html***
+```
 
-~~~ HTML
+- Adicionar atributo ***defer*** para adiar a exucução do script até que o e o DOM esteja completamente construído
+
+``` html
 ./index.html
 
 <!DOCTYPE html>
 
-<html lang="PT-br">
-<head>
+<html lang="pt-BR">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
-    <script src="./scr/script.js"></script>
-</head>
-<body></body>
+    <script defer>
+      console.log("Hello World!");
+    </script>
+  </head>
+  <body></body>
 </html>
-~~~
 
-## Comentários 
+```
 
-### Comentario de linha
+- Adicionar tag ***script*** à tag ***body***
 
-~~~ JavaScript
+``` html
+./index.html
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script></script>
+  </body>
+</html>
+
+```
+
+- Imprimir "Hello World" no console do navegador
+
+``` html
+./index.html
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script>
+      console.log("Hello World!");
+    </script>
+  </body>
+</html>
+
+```
+
+### Integrar **JavaScript** de forma externa ao arquivo ***index.html***
+
+- Criar diretório ***src*** na raiz do projeto
+
+``` bash
+
+.
+│ index.html
+└─src
+
+```
+
+- Criar arquivo ***script.js*** na raiz do diretótio ***src***
+
+``` bash
+
+.
+│ index.html
+├─src
+│   script.js
+
+```
+
+- Integrar arquivo ***script.js*** ao arquivo ***index.html*** através do atributo ***src*** adicionado à tag ***script***
+
+``` html
+./index.html
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
+
+```
+
+- Imprimir "Hello World" no console do navegador
+
+``` javascript
 ./src/script.js
-// Cometário de linha
 
-~~~
+console.log("Hello World!");
 
-### Comentario de bloco simples
+```
 
-~~~ JavaScript
+## COMENTÁRIOS
+
+### Comentário de linha
+
+- Escrever comentário de linha
+
+``` javascript
 ./src/script.js
-/* Cometário de bloco simples */
 
-~~~
+// comentário de linha
 
-### Comentario de bloco com marcadores
+```
 
-~~~ JavaScript
+### Comentário de bloco
+
+- Escrever comentário de bloco simples
+
+``` javascript
 ./src/script.js
-/**
- *  Cometário de bloco com marcadores
+
+/*
+comentário de bloco
 */
 
-~~~
+```
+
+- Escrever comentário de bloco com marcadores
+
+``` javascript
+./src/script.js
+
+/**
+ * comentário de bloco com marcadores
+ */
+
+```
 
 ## VARIÁVEIS
 
 ### Declaração
 
-~~~ JavaScript
+- Declarar variável com identificador ***number***
+
+``` javascript
 ./src/script.js
+
 var number;
-~~~
+
+```
 
 ### Atribuição de valor
 
-~~~ JavaScript
+- Atribuir valor à variável ***number***
+
+``` javascript
 ./src/script.js
 
 var number;
-number = 2;
-~~~
+
+number = 5;
+
+```
 
 ### Declaração e atribuição de valor
 
-~~~ JavaScript
+- Declarar e atribuir valor à variável ***number***
+
+``` javascript
 ./src/script.js
 
-var number = 2;
-~~~
+var number = 5;
+
+```
 
 ### Reatribuição de valor
 
-~~~ JavaScript
+- Reatribuir valor à variável ***number***
+
+``` javascript
 ./src/script.js
 
-var number = 2;
+var number = 5;
 
-number = 8
-~~~
+number = 10;
 
-### Nomenclaturas
+```
 
-- Caracteres permitidos para iniciar a nomenclatura de um identificador
+### Nomeclaturas
 
-~~~JavaScript
+- Caracteres permitidos para iniciar a nomeclatura de um indetificador
+
+``` javascript
 ./src/script.js
 
-// letras
+// letra
 var number;
 var Number;
 
-//sublinhado
-var _number
+// sublinhado
+var _number;
 
-//cifrão
+// cifrão
 var $number;
 
-~~~
+```
 
-- Case-senstive
-~~~JavaScript
+- Case-sensitive
+
+``` javascript
 ./src/script.js
 
 // "number" é diferente de "Number"
-~~~
 
-- Nomenclaturas Compostas
+```
 
-~~~JavaScript
+- Nomeclaturas compostas
+
+``` javascript
 ./src/script.js
 
 // camelCase
-var myName
+var myNumber;
 
-//PascalCase
-var MyName;
+// PascalCase
+var MyNumber;
 
 // snake_case
-var my_name;
-~~~
+var my_number;
+
+```
 
 ## TIPOS DE DADOS
 
 ### Primitivos
 
-~~~JavaScript
+``` javascript
 ./src/script.js
 
-// String
-var name = "Alex"; // Aspas Composta
-var surname = 'Bessa'; // Aspas Simples
-
-// Number
-var age = 28;
+// number
+var age = 29;
 var weight = 85.6;
 
-//boolean
+// string
+var name = "Alex";
+var surname = 'Bessa';
+
+// boolean
 var active = true;
 var permission = false;
 
-// Undefined
+// undefined
 var contains;
 console.log(contains);
 
-// Null
+// null
 var data = null;
 
-~~~
+```
 
 ### Não primitivos
 
-~~~ javascript
+``` javascript
 ./src/script.js
 
 // array
-var values = [1, "José", true, null];
+var numbers = [1, 2, 3, 4, 5];
 
 // object literal
-var person = {name:"João", age: 34};
-
 var person = {
-    name: "Joseph",
-    age: 40
-};
+  name: "Alex",
+  age: 29
+}
 
-// typeof
-var age = 29
-console.log(typeof age);
+// function
+var messege = function(){}
 
-~~~
+```
+
+### Inspecionar tipo
+
+``` javascript
+./src/script.js
+
+var number = 5;
+
+console.log(typeof number);
+
+```
 
 ### Coerção de tipo
-- Implícita 
 
-~~~ javascript
+#### Implícita
+
+``` javascript
 ./src/script.js
 
 var age = 29;
-var weigth = "86.5";
-var result = age + weight;
+var weight = "85.6";
 
-console.log(typeof result)
-~~~
+console.log(age + weight);
 
-- Explícita 
+```
+
+#### Explícita
+
+``` javascript
+./src/script.js
+
+// Number()
+var age = Number("29");
+console.log(typeof age);
+
+// Sctring()
+var age = String(29);
+console.log(typeof age);
+
+// Boolean()
+var number = Boolean(0);
+console.log(number);
+
+```
+
+## Operadores
+
+### Aritmético
+
+``` javascript
+./src/script.js
+
+// adição
+var a = 10;
+var b = 5;
+var result = a + b;
+console.log(result);
+
+// subtração
+var a = 10;
+var b = 5;
+var result = a - b;
+console.log(result);
+
+// multiplicação
+var a = 10;
+var b = 5;
+var result = a * b;
+console.log(result);
+
+// divisão 
+var a = 10;
+var b = 5;
+var result = a / b;
+console.log(result);
+
+// módulo
+var a = 10;
+var b = 5;
+var result = a % b;
+console.log(result);
+
+// incremento
+var x = 5;
+x++;
+console.log(x);
+
+// decremento
+var x = 5;
+x--;
+console.log(x);
+
+```
+
+### Atribuição
+
+``` javascript
+./src/script.js
+
+// simples
+var name = "Alex";
+
+// atribuição de adição
+var balance = 100;
+balance += 50;
+console.log(balance);
+
+// atribuição de subtração
+var balance = 100;
+balance -= 50;
+console.log(balance);
+
+// atribuição de multiplicação
+var balance = 100;
+balance *= 50;
+console.log(balance);
+
+// atribuição de divisão
+var balance = 100;
+balance /= 50;
+console.log(balance);
+
+// atribuição de módulo
+var balance = 100;
+balance %= 50;
+console.log(saldo);
+
+```
+
+### Comparação
+
+``` javascript
+./src/script.js
+
+// igual
+console.log(10 == "10");
+
+// estritamente igual
+console.log(10 === "10");
+
+// diferente
+console.log(10 != "10");
+
+// estritamente diferente
+console.log(10 !== "10");
+
+// maior que
+console.log(10 > 5);
+
+// menor que
+console.log(10 < 5);
+
+// maior ou igual
+console.log(10 >= 10);
+
+// menor ou igual
+console.log(10 <= 10);
+
+```
+
+### Lógicos
+
+``` javascript
+./src/script.js
+
+// AND
+var age = 29;
+var license = true;
+console.log(age >= 18 && license);
+
+// OR
+var age = 29;
+var license = false;
+console.log(age >= 18 || license);
+
+// NOT
+var active = true;
+console.log(!active);
+
+```
+
+## Estruturas de Controle de Fluxo
+
+### Estruturas Condicionais
+
+### Truthy and Falsy
+
+- **truthy**: tudo que não for ***falsy***
+
+- **falsy**: "", 0, false, undefined, null, NaN
+
+#### if
 
 ~~~ javascript
 ./src/script.js
 
-//number()
-var weight = Number("105.4");
-console.log(typeof weight)
+if (5 == "5") {
+  console.log("Executou.");
+}
 
-//string()
-var age = String(29);
-console.log(typeof age)
+~~~
 
-//boolean()
-var active = Boolean(0)
-console.log(typeof active);
+#### else
+
+~~~ javascript
+./src/script.js
+
+if (5 == "5") {
+  console.log("Verdadeiro.");
+} else {
+  console.log("Falso.");
+}
+
+~~~
+
+#### else if
+
+~~~ javascript
+./src/script.js
+
+var age = 65;
+
+if (age > 60) {
+  console.log("Aposentado.");
+} else if (age > 30) {
+  console.log("CLT.");
+} else {
+  console.log("Colleger.");
+}
+
+~~~
+
+#### Operador ternário
+
+~~~ javascript
+./src/javascript.js
+
+var age = 16;
+
+age >= 18 ? console.log("Adult") : console.log("Minor.");
+
+~~~
+
+#### Curto-circuito lógico
+
+~~~ javascript
+./src/javascript.js
+
+var licensed = false;
+
+!licensed && console.log("Precisa tirar a carta de habilitação.");
+
+~~~
+
+#### switch case
+~~~ javascript
+./src/javascript.js
+
+var light = "green";
+
+switch (light) {
+    case "red":
+        console.log("Stop!");
+        break;
+    case "yellow":
+        console.log("Attention!");
+        break;
+    case "green":
+        console.log("Go!");
+        break;
+    default:
+        console.log("Invalid color.");
+}
+
+~~~
+
+### Estruturas de Repetição
+
+#### for
+
+~~~ javascript
+./src/script.js
+
+for (var n = 0; n <= 5; n++) {
+  console.log("Number: " + n);
+}
+
+~~~
+
+#### while
+
+~~~ javascript
+./src/script.js
+
+var n = 0;
+
+while (n <= 5) {
+  console.log("Number: " + n);
+  n++;
+}
+
+~~~
+
+#### do while
+
+~~~ javascript
+./src/script.js
+
+var n = 10;
+
+do {
+  console.log("Executed at least once.");
+} while (n < 5)
 
 ~~~
